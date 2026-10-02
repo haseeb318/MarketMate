@@ -1,0 +1,8 @@
+crewai==1.15.23
+crewai-tools==1.15.23
+google-genai==1.75.0
+streamlit==1.64.0
+pandas==3.0.6
+pillow==12.3.0
+pydantic==2.12.5
+python-dotenv==1.2.4
