@@ -86,6 +86,7 @@ scheduling_task = Task(
     - Suggested date
     - Suggested time
     - Content type
+    - Post content (the actual marketing copy to be saved)
     """,
     agent=scheduler,
 )

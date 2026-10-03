@@ -13,9 +13,10 @@ from tools.market_tools import (
 load_dotenv()
 
 llm = LLM(
-    model=os.getenv("MODEL", "gemini/gemini-3.8-flash"),
+    model=os.getenv("MODEL", "gemini/gemini-3.5-flash"),
     api_key=os.getenv("GEMINI_API_KEY"),
 )
+
 @tool("sales_trends")
 def sales_trends_tool() -> str:
     """Get recent product sales trends from the MarketMate database."""
