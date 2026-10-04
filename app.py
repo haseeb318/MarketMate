@@ -21,6 +21,14 @@ os.environ["OTEL_SDK_DISABLED"] = "true"
 
 import streamlit as st
 
+# Bridge Streamlit Cloud Secrets into environment variables if deployed
+try:
+    for _k, _v in st.secrets.items():
+        if isinstance(_v, str):
+            os.environ.setdefault(_k, _v)
+except Exception:
+    pass
+
 from crew import LLMFailedError, main
 from tools.market_tools import (
     MAX_POSTS_PER_DAY,
